@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<title>Jenny | Data Analyst Portfolio</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    padding:20px;
+
+    display:flex;
+    justify-content:center;
+    gap:30px;
+
+    background:rgb(134, 196, 188); /* solid color */
+
+    z-index:999999;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+nav a{
+color:#ecf0f4;
+text-decoration:none;
+font-weight:600;
+}
+
+h2{
+    margin-bottom:30px;
+}
+
+/* HERO SECTION */
+
+.hero{
+    position:relative;
+
+    min-height:100vh;
+
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+}
+
+/* BACKGROUND IMAGE */
+
+.bg-image{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+
+    background:url("analytics.png") center center/cover no-repeat;
+
+    opacity:0.12;
+
+    z-index:-1;
+
+    pointer-events:none;
+}
+
+/* CONTENT */
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+/* NAME */
+
+.hero-content h1{
+    font-family:'Playfair Display',serif;
+
+    font-size:7rem;
+
+    font-weight:700;
+
+    letter-spacing:-3px;
+
+    color:#0F172A;
+
+    margin-bottom:20px;
+}
+
+/* DESCRIPTION */
+
+.hero-content p{
+    max-width:800px;
+
+    margin:auto;
+
+    font-size:1.3rem;
+
+    line-height:1.8;
+
+    color:#25272a;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:15px 35px;
+
+    background:rgb(194, 220, 217);
+
+    color:rgb(6, 6, 6);
+
+    text-decoration:none;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:0.3s ease;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+section{
+    width:100%;
+    max-width:1100px;
+
+    margin:0 auto 10px auto;
+
+    padding:70px 5%;
+
+    text-align:center;
+
+    scroll-margin-top:100px;
+}
+
+.skills-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.skill-card{
+    background:rgb(194,220,217);
+    padding:25px;
+    border-radius:20px;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,0.08);
+
+    transition:.3s ease;
+}
+
+.skill-card:hover{
+    transform:translateY(-8px);
+}
+
+.skill-card img{
+    width:80px;
+    height:80px;
+    object-fit:contain;
+    margin-bottom:40px;
+}
+
+.certifications{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:25px;
+    margin-top:20px;
+}
+
+.cert-btn{
+    text-decoration:none;
+
+    background:rgb(194, 220, 217);
+
+    border:1px solid #E2E8F0;
+
+    padding:18px 25px;
+
+    border-radius:15px;
+
+    color:#0F172A;
+
+    font-weight:600;
+
+    box-shadow:
+    0 4px 10px rgba(0,0,0,0.05),
+    0 10px 20px rgba(0,0,0,0.06);
+
+    transition:.3s ease;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+    background:rgb(194, 220, 217);
+    border:1px solid #DDE4EE;
+    border-radius:20px;
+    padding:25px;
+
+    box-shadow:
+    0 1px 2px rgba(0,0,0,0.04),
+    0 8px 24px rgba(15,23,42,0.08);
+
+    transition:all .35s ease;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:
+    0 12px 30px rgba(15,23,42,0.12);
+}
+
+@keyframes slideDown{
+from{
+opacity:0.09;
+transform:translateY(-50px);
+}
+to{
+opacity:0.09;
+transform:translateY(0);
+}
+}
+
+.hero{
+    min-height:45vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:80px;
+    width:100%;
+    max-width:1200px;
+}
+
+.hero-content{
+    flex:1;
+    text-align:left;
+}
+
+.hero-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:350px;
+    height:350px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:6px solid rgb(194,220,217);
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+section:not(.hero){
+    opacity:0;
+    transform:translateY(100px);
+    transition:all 1s ease;
+}
+
+section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.75);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:99999;
+}
+
+.modal-content{
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    max-width:500px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,0.3);
+
+    animation:popup .5s ease;
+}
+
+.modal-content h1{
+    margin-bottom:15px;
+}
+
+.modal-content p{
+    margin-bottom:15px;
+    color:#555;
+}
+
+#enterBtn{
+    margin-top:15px;
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:rgb(134,196,188);
+
+    color:white;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+#enterBtn:hover{
+    transform:translateY(-3px);
+}
+
+@keyframes popup{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+body{
+    padding-top:100px;
+}
+
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:4rem;
+    }
+
+    .skills-container{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        gap:15px;
+        flex-wrap:wrap;
+    }
+
+    .hero-container{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .hero-content{
+        margin-left:0;
+        text-align:center;
+    }
+
+    .hero-image img{
+        width:220px;
+        height:220px;
+    }
+
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+</style>
+</head>
+
+<body>
+<div class="bg-image"></div>
+
+<body>
+
+<div id="welcomeModal" class="modal">
+    <div class="modal-content">
+
+        <h1>Hey there, I'm Jenifer</h1>
+
+        <p>Data Analyst who loves turning numbers into insights that drive smarter decisions</p>
+
+        <p>Welcome to my portfolio !!!</p>
+
+        <button id="enterBtn">
+            Discover - "My Journey"
+        </button>
+
+    </div>
+</div>
+
+<nav>
+    <a href="#about">About me</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+
+<section class="hero">
+
+    <img src="analytics.png" class="bg-image">
+
+    <div class="hero-container">
+
+        <div class="hero-content">
+
+            <h1>Jenifer</h1>
+
+            <p>
+                Data Analyst | SQL | Python | Power BI | Excel
+            </p>
+
+            <a href="Resume_Jenifer.pdf" download class="btn">
+                Download Resume
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="Jenny.jpeg" alt="Jenifer">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <p>
+        I like working with data like some people like solving puzzles.
+
+        Cleaning up messy data, writing SQL queries, creating dashboards in Power BI, turning numbers into clear stories and these are the things that really excite me.
+
+        I’ve been working on projects using Python, SQL and Power BI to improve my analytical skills and ability to present data visually.
+
+        Now, I’m looking for my first chance to grow as a Data Analyst.
+
+        I’m especially interested in roles where I can keep learning, work with others and help businesses make better decisions through data.
+
+    </p>
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills">
+
+    <h2>Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <img src="sql.png" alt="SQL">
+            <h3>SQL</h3>
+            <p>Extracting and transforming data using advanced queries, joins and database management techniques.</p>
+        </div>
+
+        <div class="skill-card">
+            <img src="python.png" alt="Python">
+            <h3>Python</h3>
+            <p>Analyzing and processing datasets using Python libraries for efficient data-driven solutions.</p>
+        </div>
+
+        <div class="skill-card">
+            <img src="bi.png" alt="Power BI">
+            <h3>Power BI</h3>
+            <p>Building interactive dashboards and KPI reports to support business decision-making.</p>
+        </div>
+
+        <div class="skill-card">
+            <img src="cleaning.png" alt="Data Cleaning">
+            <h3>Data Cleaning</h3>
+            <p>Ensuring data quality by identifying and resolving inconsistencies and missing information.</p>
+        </div>
+
+        <div class="skill-card">
+            <img src="visual.png" alt="Data Visualization">
+            <h3>Data Visualization</h3>
+            <p>Presenting complex information through clear and insightful visual representations.</p>
+        </div>
+
+        <div class="skill-card">
+            <img src="exploration.png" alt="Data Exploration">
+            <h3>Data Exploration</h3>
+            <p>Discovering patterns, trends and valuable insights through exploratory data analysis.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <h2>Projects</h2>
+
+    <h3>Sales Dashboard</h3>
+
+    <p>
+        Interactive Power BI dashboard to analyze revenue,
+        profit and business performance.
+    </p>
+
+    <br>
+
+    <h3>Customer Churn Analysis</h3>
+
+    <p>
+        Python project identifying customer retention trends
+        using exploratory data analysis.
+    </p>
+
+    <br>
+
+    <h3>SQL Business Insights</h3>
+
+    <p>
+        Advanced SQL queries to generate business reports
+        and performance metrics.
+    </p>
+
+</section>
+
+
+<!-- CERTIFICATIONS -->
+
+<section id="certifications">
+
+    <h2>Certifications</h2>
+
+    <div class="certifications">
+
+        <a href="Coursera-1.pdf" target="_blank" class="cert-btn">
+            Data Science with NumPy, Sets and Dictionaries Certifiate
+        </a>
+
+        <a href="Coursera-2.pdf" target="_blank" class="cert-btn">
+            Visualization for Data Analysis with Power BI Certifiate
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <h2>Contact</h2>
+
+    <p>Email: jeniferjothid@gmail.com</p>
+
+    <br>
+
+    <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/jenifer-data-analyst/"
+           target="_blank">
+           View Profile
+        </a>
+    </p>
+
+</section>
+
+<script>
+
+// Scroll animations
+
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        } else {
+            entry.target.classList.remove("show");
+        }
+
+    });
+}, {
+    threshold: 0.2
+});
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+
+
+// Welcome popup
+
+const modal = document.getElementById("welcomeModal");
+const enterBtn = document.getElementById("enterBtn");
+
+if(modal && enterBtn){
+
+    enterBtn.addEventListener("click", () => {
+
+        modal.style.display = "none";
+
+    });
+
+}
+
+</script>
+<footer>
+    © 2026 Jenifer | Data Analyst Portfolio
+</footer>
+</body>
+</html>
