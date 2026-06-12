@@ -744,11 +744,15 @@ sections.forEach(section => {
     © 2026 Jenifer | All Rights Reserved
 </footer>
 
-    <script>
+<script>
 
-document.getElementById("enterBtn").onclick = function(){
+window.onload = function(){
 
-    document.getElementById("welcomeModal").style.display = "none";
+    document.getElementById("enterBtn").addEventListener("click", function(){
+
+        document.getElementById("welcomeModal").style.display = "none";
+
+    });
 
 };
 
