@@ -436,7 +436,34 @@ body{
         text-decoration:none;
         font-weight:600;
     }
+    .resume-float{
+    position:fixed;
 
+    bottom:30px;
+    right:30px;
+
+    padding:15px 25px;
+
+    border-radius:50px;
+
+    background:rgb(134,196,188);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+    z-index:99999;
+
+    transition:.3s ease;
+}
+
+.resume-float:hover{
+    transform:translateY(-5px);
+}
 }
 
 footer{
@@ -463,7 +490,7 @@ footer{
         <p>Welcome to my portfolio !!!</p>
 
         <button id="enterBtn">
-            Discover - "My Journey"
+            Discover - My Journey
         </button>
 
     </div>
@@ -499,10 +526,6 @@ footer{
             <p>
                 Data Analyst | SQL | Python | Power BI | Excel
             </p>
-
-            <a href="Resume_Jenifer.pdf" download class="btn">
-                Resume
-            </a>
 
         </div>
 
@@ -699,8 +722,14 @@ if(modal && enterBtn){
 }
 
 </script>
+    
 <footer>
     © 2026 Jenifer | Data Analyst Portfolio
 </footer>
+    
+<a href="Resume_Jenifer.pdf" download class="resume-float">
+    📄 Resume
+</a>
+    
 </body>
 </html>
