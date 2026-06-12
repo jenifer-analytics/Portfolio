@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
 <title>Jenny | Data Analyst Portfolio</title>
 
 <style>
@@ -444,6 +445,24 @@ body{
     margin:50px auto;
     max-width:700px;
     }
+    .contact-icons{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:20px;
+    }
+    
+    .contact-icons img{
+        width:50px;
+        height:50px;
+        object-fit:contain;
+    
+        transition:.3s ease;
+    }
+    
+    .contact-icons img:hover{
+        transform:translateY(-5px) scale(1.1);
+    }
 }
 
 footer{
@@ -646,11 +665,11 @@ footer{
     <div class="certifications">
 
         <a href="Coursera-1.pdf" target="_blank" class="cert-btn">
-            Data Science with NumPy, Sets and Dictionaries Certifiate
+            Data Science with NumPy, Sets and Dictionaries
         </a>
 
         <a href="Coursera-2.pdf" target="_blank" class="cert-btn">
-            Visualization for Data Analysis with Power BI Certifiate
+            Visualization for Data Analysis with Power BI
         </a>
 
     </div>
@@ -664,17 +683,18 @@ footer{
 
     <h2>Contact</h2>
 
-    <p>Email: jeniferjothid@gmail.com</p>
+    <div class="contact-icons">
 
-    <br>
+        <a href="mailto:jeniferjothid@gmail.com">
+            <img src="mail.png" alt="Email">
+        </a>
 
-    <p>
-        LinkedIn:
         <a href="https://www.linkedin.com/in/jenifer-data-analyst/"
            target="_blank">
-           View Profile
+            <img src="linkedin.png" alt="LinkedIn">
         </a>
-    </p>
+
+    </div>
 
 </section>
 
@@ -721,7 +741,7 @@ if(modal && enterBtn){
 </script>
     
 <footer>
-    © 2026 Jenifer | Data Analyst Portfolio
+    © 2026 Jenifer | All Rights Reserved
 </footer>
     
 </body>
