@@ -450,17 +450,21 @@ body{
     .contact-icons{
     display:flex;
     justify-content:center;
-    gap:40px;
-    margin-top:20px;
+    align-items:center;
+    gap:20px;
     }
     
     .contact-icons img{
-    width:20px;
-    height:20px;
+        width:30px;
+        height:30px;
+    
+        object-fit:contain;
+    
+        transition:.3s ease;
     }
     
     .contact-icons img:hover{
-        transform:translateY(-5px) scale(1.1);
+        transform:scale(1.1);
     }
 }
 
