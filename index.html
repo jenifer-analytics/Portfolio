@@ -455,15 +455,15 @@ body{
     }
 
     .contact-icons img{
+    object-fit:contain;
+    transition:.3s ease;
+    }
+    
+    .mail-icon,
+    .linked-icon{
         width:35px;
         height:35px;
         object-fit:contain;
-
-        transition:.3s ease;
-    }
-
-    .contact-icons img:hover{
-        transform:translateY(-5px) scale(1.1);
     }
 }
 
@@ -688,12 +688,12 @@ footer{
     <div class="contact-icons">
 
         <a href="mailto:jeniferjothid@gmail.com">
-            <img src="mail.png" alt="Email">
+           <img src="mail.png" class="mail-icon" alt="Email">
         </a>
 
         <a href="https://www.linkedin.com/in/jenifer-data-analyst/"
            target="_blank">
-            <img src="linked.png" alt="LinkedIn">
+            <img src="linkedin.png" class="linkedin-icon" alt="LinkedIn">
         </a>
 
     </div>
