@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
 <title>Jenny | Data Analyst Portfolio</title>
 
 <style>
@@ -389,8 +387,9 @@ html {
 }
 
 body{
-    font-family:'Poppins',sans-serif;
+    padding-top:100px;
 }
+
 @media(max-width:768px){
 
     .hero-content h1{
@@ -420,47 +419,24 @@ body{
         width:220px;
         height:220px;
     }
-
     .logo{
-    color:white;
     font-size:1.2rem;
     font-weight:700;
+    color:white;
     }
 
-    nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:20px 50px;
-
-    background:rgb(134,196,188);
-
-    z-index:999999;
-    }
-    
     .nav-links{
         display:flex;
         gap:45px;
     }
-    
+
     .nav-links a{
+        color:#ecf0f4;
         text-decoration:none;
-        color:white;
         font-weight:600;
     }
-    
-    .logo{
-        color:white;
-        font-size:1.2rem;
-        font-weight:700;
+
     }
-    
    .resume-card{
     background:rgb(194,220,217);
     padding:40px;
@@ -469,22 +445,26 @@ body{
     margin:50px auto;
     max-width:700px;
     }
-    
+
     .contact-icons{
     display:flex;
     justify-content:center;
-    align-items:center;
-    gap:25px;
+    gap: 45px;
     margin-top:20px;
     }
-    
+
     .contact-icons img{
-        width:30px;
-        height:30px;
+        width:35px;
+        height:35px;
         object-fit:contain;
-        display:block;
+
+        transition:.3s ease;
     }
-}
+
+    .contact-icons img:hover{
+        transform:translateY(-5px) scale(1.1);
+    }
+
 
 footer{
     text-align:center;
@@ -496,29 +476,30 @@ footer{
 </head>
 
 <body>
-
 <div class="bg-image"></div>
 
-<div class="modal" id="welcomeModal">
+<body>
 
+<div id="welcomeModal" class="modal">
     <div class="modal-content">
 
-        <h1>I'm Jenifer</h1>
+        <h1>Hey there, I'm Jenifer</h1>
 
-        <p>Love turning raw data into actionable insights.</p>
+        <p>Data Analyst who loves turning numbers into insights that drive smarter decisions</p>
+
+        <p>Welcome to my portfolio !!!</p>
 
         <button id="enterBtn">
-            Discover-My Journey
+            Discover - "My Journey"
         </button>
 
     </div>
-
 </div>
 
 <nav>
 
     <div class="logo">
-        ◢ EXEC JeniferPortfolio
+         ◢ EXEC JeniferPortfolio;
     </div>
 
     <div class="nav-links">
@@ -529,6 +510,7 @@ footer{
     </div>
 
 </nav>
+
 
 <section class="hero">
 
@@ -684,11 +666,11 @@ footer{
     <div class="certifications">
 
         <a href="Coursera-1.pdf" target="_blank" class="cert-btn">
-            Data Science with NumPy, Sets and Dictionaries
+            Data Science with NumPy, Sets and Dictionaries Certifiate
         </a>
 
         <a href="Coursera-2.pdf" target="_blank" class="cert-btn">
-            Visualization for Data Analysis with Power BI
+            Visualization for Data Analysis with Power BI Certifiate
         </a>
 
     </div>
@@ -708,8 +690,8 @@ footer{
             <img src="mail.png" alt="Email">
         </a>
 
-        <a href="https://www.linkedin.com/in/jenifer-data-analyst/" target="_blank">
-            <img src="LinkedIn.png" alt="LinkedIn">
+        <a href="https://www.linkedin.com/in/jenifer-data-analyst/" >
+            <img src="linkedin.png" alt="LinkedIn">
         </a>
 
     </div>
@@ -739,24 +721,26 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => {
     observer.observe(section);
 });
-  
-<footer>
-    © 2026 Jenifer | All Rights Reserved
-</footer>
 
-<script>
 
-window.onload = function(){
+// Welcome popup
 
-    document.getElementById("enterBtn").addEventListener("click", function(){
+const modal = document.getElementById("welcomeModal");
+const enterBtn = document.getElementById("enterBtn");
 
-        document.getElementById("welcomeModal").style.display = "none";
+if(modal && enterBtn){
+
+    enterBtn.addEventListener("click", () => {
+
+        modal.style.display = "none";
 
     });
 
-};
+}
 
 </script>
-    
+<footer>
+    © 2026 Jenifer | Data Analyst Portfolio
+</footer>
 </body>
 </html>
