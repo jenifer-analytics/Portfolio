@@ -454,16 +454,19 @@ body{
     margin-top:20px;
     }
 
-    .contact-icons img{
-    object-fit:contain;
-    transition:.3s ease;
-    }
-    
+    .contact-icons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+}
+
     .mail-icon,
-    .linked-icon{
+    .linkedin-icon{
         width:30px;
         height:30px;
         object-fit:contain;
+        display:block;
     }
 }
 
@@ -693,7 +696,7 @@ footer{
 
         <a href="https://www.linkedin.com/in/jenifer-data-analyst/"
            target="_blank">
-            <img src="linked.png" class="linked-icon" alt="LinkedIn">
+            <img src="mail.png" class="linkedin-icon" alt="LinkedIn">
         </a>
 
     </div>
