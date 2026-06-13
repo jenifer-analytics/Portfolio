@@ -507,21 +507,19 @@ body{
     .contact-icons{
     display:flex;
     justify-content:center;
-    gap:35px;
+    align-items:center;
+    gap:60px;
     }
     
-    .mail-icon{
-        width:20px !important;
-        height:20px !important;
-        object-fit:contain;
+    .contact-icons a{
+        color:#0F172A;
+        font-size:50px;
+        transition:0.3s ease;
     }
-
-    .linkedin-icon{
-    width:20px !important;
-    height:20px !important;
-    display:block;
-}
-
+    
+    .contact-icons a:hover{
+        transform:translateY(-4px);
+    }
 }
 
 footer{
@@ -746,12 +744,12 @@ footer{
 
     <div class="contact-icons">
 
-        <a href="mailto:jeniferjothid@gmail.com">
-            <img src="mail.png" alt="Email">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jeniferjothid@gmail.com" target="_blank">
+            <i class="fa-solid fa-envelope"></i>
         </a>
 
-        <a href="https://www.linkedin.com/in/jenifer-data-analyst/" >
-            <img src="LinkedIn.png" alt="LinkedIn">
+        <a href="https://www.linkedin.com/in/jenifer-data-analyst/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
         </a>
 
     </div>
