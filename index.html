@@ -145,6 +145,28 @@ h2{
     transform:translateY(-4px);
 }
 
+.about-card{
+    background:rgba(255,255,255,0.75);
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+    transition:.3s ease;
+
+    max-width:1000px;
+
+    margin:auto;
+}
+
+.about-card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,0.12);
+}
+    
 section{
     width:100%;
     max-width:1100px;
@@ -492,8 +514,6 @@ footer{
 
         <p>Data Analyst who loves turning numbers into insights that drive smarter decisions</p>
 
-        <p>Welcome to my portfolio !!!</p>
-
         <button id="enterBtn">
             Discover - "My Journey"
         </button>
@@ -547,7 +567,9 @@ footer{
 
     <h2>About Me</h2>
 
-    <p>
+    <div class="about-card">
+
+        <p>
         I like working with data like some people like solving puzzles.
 
         Cleaning up messy data, writing SQL queries, creating dashboards in Power BI, turning numbers into clear stories and these are the things that really excite me.
@@ -557,8 +579,9 @@ footer{
         Now, I’m looking for my first chance to grow as a Data Analyst.
 
         I’m especially interested in roles where I can keep learning, work with others and help businesses make better decisions through data.
+        </p>
 
-    </p>
+    </div>
 
 </section>
 
