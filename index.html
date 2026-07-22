@@ -284,29 +284,56 @@ section{
 
 /* PROJECT CARD */
 
+/* Project Card */
 .project-card {
-    background: rgba(255, 255, 255, 0.45);
-    border-radius: 25px;
-    box-shadow:
-        0 10px 30px rgba(255, 255, 255, 0.25),
-        inset 0 0 15px rgba(255, 255, 255, 0.2);
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+    cursor: pointer;
 }
 
+/* Hover Effect */
 .project-card:hover {
-    border-color: transparent;
-    box-shadow: 0 12px 35px rgba(255,255,255,0.45);
-}
-    
-.project-card h3{
-    color:#155724;
-    margin-bottom:18px;
-    font-size:24px;
+    background: #d9f5e5; /* light green background */
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25); /* light black shadow */
 }
 
-.project-card p{
-    color:#2d4739;
-    line-height:1.7;
-    margin:18px 0 25px;
+/* Project Title */
+.project-card h3 {
+    color: #111;
+    transition: color 0.3s ease;
+}
+
+/* Title hover color */
+.project-card:hover h3 {
+    color: #0b5d3b;
+}
+
+/* Project Description */
+.project-card p {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Buttons inside project */
+.project-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Button hover */
+.project-card a:hover {
+    background: #0b5d3b;
+    color: white;
 }
 
 /* TECH BADGES */
