@@ -291,13 +291,6 @@ section{
     border: 1px solid rgba(255,255,255,0.5);
 }
 
-.projects {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;   /* permanent space between projects */
-}
-
 /* Hover Effect */
 .project-card:hover {
     transform: translateY(-8px);
@@ -337,6 +330,13 @@ section{
     background: rgb(180, 210, 207);
     transform: translateY(-3px);
     box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.projects-container{
+    display:grid;
+    gap:40px;
+    max-width:1200px;
+    margin:auto;
 }
 
 /* TECH BADGES */
