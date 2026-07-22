@@ -282,27 +282,57 @@ section{
 
 /* CARD */
 /* Project Button Style */
-.project-btn {
-    display: inline-block;
-    padding: 18px 40px;
-    background: #c8e5df; /* light green background */
-    color: #111; /* black text */
+/* Project Box */
+.project-card {
+    background: rgb(194, 220, 217);
+    padding: 30px;
     border-radius: 20px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 700;
-    border: 1px solid rgba(255,255,255,0.5);
     box-shadow: 0 5px 15px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.5);
 }
 
 
 /* Hover Effect */
-.project-btn:hover {
-    background: #b8ddd4; /* slightly darker green */
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+
+/* Project Heading */
+.project-card h3 {
+    color: #111;
+    font-weight: 700;
+}
+
+
+/* Project Description */
+.project-card p {
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* Project Buttons */
+.project-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 15px 35px;
+    background: rgb(194, 220, 217);
     color: #000;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+}
+
+
+.project-btn:hover {
+    background: rgb(180, 210, 207);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
 }
 
 /* TECH BADGES */
